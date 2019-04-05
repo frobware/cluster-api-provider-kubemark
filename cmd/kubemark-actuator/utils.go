@@ -16,7 +16,7 @@ import (
 
 	machineactuator "github.com/openshift/cluster-api-provider-kubemark/pkg/actuators/machine"
 	"github.com/openshift/cluster-api-provider-kubemark/pkg/apis/kubemarkproviderconfig/v1beta1"
-	clusterv1 "github.com/openshift/cluster-api/pkg/apis/machine/v1beta1"
+	clusterv1 "sigs.k8s.io/cluster-api/pkg/apis/cluster/v1alpha1"
 )
 
 type manifestParams struct {

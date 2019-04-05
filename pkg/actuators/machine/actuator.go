@@ -33,10 +33,10 @@ import (
 	"k8s.io/client-go/tools/record"
 
 	providerconfigv1 "github.com/openshift/cluster-api-provider-kubemark/pkg/apis/kubemarkproviderconfig/v1beta1"
-	machinev1 "github.com/openshift/cluster-api/pkg/apis/machine/v1beta1"
-	clustererror "github.com/openshift/cluster-api/pkg/controller/error"
-	apierrors "github.com/openshift/cluster-api/pkg/errors"
 	uuid "github.com/satori/go.uuid"
+	machinev1 "sigs.k8s.io/cluster-api/pkg/apis/cluster/v1alpha1"
+	clustererror "sigs.k8s.io/cluster-api/pkg/controller/error"
+	apierrors "sigs.k8s.io/cluster-api/pkg/errors"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
 	"k8s.io/apimachinery/pkg/labels"
@@ -397,7 +397,7 @@ func (a *Actuator) DeleteMachine(cluster *machinev1.Cluster, machine *machinev1.
 	// Thus, re-queue with error.
 	// (pods may stay in terminated state for a while)
 	if err := kubeClient.CoreV1().Pods(machinePod.Namespace).Delete(machinePod.Name, nil); err != nil {
-		glog.Warning("unable to get machine pod for %v/%v: %v", machine.Namespace, machine.Name, err)
+		glog.Warningf("unable to get machine pod for %v/%v: %v", machine.Namespace, machine.Name, err)
 		return a.handleMachineError(machine, apierrors.DeleteMachine(err.Error()), noEventAction)
 	}
 
