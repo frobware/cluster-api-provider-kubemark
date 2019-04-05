@@ -18,7 +18,7 @@
 # YAML string, with resources separated by document
 # markers ("---").
 resources:
-- crds/machine.openshift.io.crd.yaml
+- crds/cluster.k8s.io.crd.yaml
 - crds/machineset.openshift.io.crd.yaml
 - crds/machinedeployment.openshift.io.crd.yaml
 - crds/cluster.crd.yaml

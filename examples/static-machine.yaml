@@ -1,11 +1,11 @@
 ---
-apiVersion: machine.openshift.io/v1beta1
+apiVersion: cluster.k8s.io/v1alpha1
 kind: Machine
 metadata:
   name: minikube-static-machine
   namespace: kube-system
   annotations:
-    machine.openshift.io/static-machine: minikube
+    cluster.k8s.io/static-machine: minikube
 spec:
   providerSpec:
     value:

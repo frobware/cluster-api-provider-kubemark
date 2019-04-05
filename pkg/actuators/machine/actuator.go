@@ -55,7 +55,7 @@ const (
 	machineNameLabel      = "machine.k8s.io/machine-name"
 	machineNamespaceLabel = "machine.k8s.io/machine-namespace"
 	// StaticMachineAnnotation annotation to back up a node but without an instance reconciliation
-	StaticMachineAnnotation = "machine.openshift.io/static-machine"
+	StaticMachineAnnotation = "cluster.k8s.io/static-machine"
 )
 
 // Actuator is the AWS-specific actuator for the Cluster API machine controller

@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     controller-tools.k8s.io: "1.0"
-  name: machines.machine.openshift.io
+  name: machines.cluster.k8s.io
 spec:
   additionalPrinterColumns:
   - JSONPath: .status.providerStatus.instanceId
@@ -29,7 +29,7 @@ spec:
   - JSONPath: .metadata.creationTimestamp
     name: Age
     type: date
-  group: machine.openshift.io
+  group: cluster.k8s.io
   names:
     kind: Machine
     plural: machines

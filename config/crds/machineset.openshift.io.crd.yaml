@@ -3,9 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     controller-tools.k8s.io: "1.0"
-  name: machinesets.machine.openshift.io
+  name: machinesets.cluster.k8s.io
 spec:
-  group: machine.openshift.io
+  group: cluster.k8s.io
   names:
     kind: MachineSet
     plural: machinesets
