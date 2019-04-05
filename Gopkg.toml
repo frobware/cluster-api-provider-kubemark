@@ -22,9 +22,9 @@ required = [
   name = "github.com/aws/aws-sdk-go"
   version = "v1.15.5"
 
-[[constraint]]
-  name = "github.com/openshift/cluster-api"
-  branch = "openshift-4.0-cluster-api-0.0.0-alpha.4"
+[[override]]
+  name = "sigs.k8s.io/cluster-api"
+  branch = "master"
 
 [[override]]
   name = "github.com/openshift/cluster-api-actuator-pkg"
